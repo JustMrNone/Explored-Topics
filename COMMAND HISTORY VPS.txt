@@ -1,0 +1,373 @@
+    1  sudo su
+    2  sudo nano /etc/ssh/sshd_config
+    3  sudo passwd -l root
+    4  sudo apt update
+    5  sudo su
+    6  logout
+    7  who
+    8  sudo apt update
+    9  who am I
+   10  whooo
+   11  who
+   12  neofetch
+   13  ls
+   14  pwd
+   15  sudo apt install nginx
+   16  exit
+   17  sudo apt install certbot python3-certbot-nginx
+   18  sudo certbot --nginx
+   19  exit
+   20  pwd
+   21  mkdir production
+   22  cd m
+   23  cd production
+   24  mkdir projects
+   25  cd projects
+   26  git clone https://github.com/JustMrNone/Quantum-Co
+   27  ls
+   28  cd Quantum-Co
+   29  sudo apt update;sudo apt upgrade -y
+   30  exit
+   31  sudo apt install -y apt-transport-https ca-certificates curl software-properties-common\n
+   32  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg\n
+   33  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null\n
+   34  sudo apt update\n
+   35  sudo apt install -y docker-ce docker-ce-cli containerd.io\n
+   36  sudo docker --version
+   37  sudo systemctl status docker
+   38  sudo usermod -aG docker $USER
+   39  newgrp docker
+   40  docker run hello-world
+   41  sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose\n
+   42  sudo chmod +x /usr/local/bin/docker-compose\n
+   43  docker-compose --version\n
+   44  docker pull nginx\n
+   45  docker run -d -p 80:80 nginx\n
+   46  sudo lsof -i :80\n
+   47  sudo systemctl stop nginx\n
+   48  sudo lsof -i :80\n
+   49  sudo systemctl stop nginx\n
+   50  docker run -d -p 80:80 nginx\n
+   51  docker ps
+   52  ocker stop 16f406ab3aa0
+   53  docker stop 16f406ab3aa0
+   54  docker ps
+   55  docker rm 16f406ab3aa0
+   56  git checkout production
+   57  git pull origin main
+   58  git config user.name "JustMrNone"
+   59  git config user.email "kamyar.bashar@gmail.com"
+   60  git pull origin main
+   61  git commit -m "initial from server"
+   62  sudo apt install python-is-python3
+   63  python
+   64  python -m venv quantum-co-venv
+   65  sudo apt install python3.8-venv
+   66  python -m venv quantum-co-venv
+   67  curl -sSL https://install.python-poetry.org | python3 -\n
+   68  poetry --version
+   69  export PATH="$HOME/.local/bin:$PATH"\n
+   70  poetry --version
+   71  poetry install
+   72  sudo add-apt-repository ppa:deadsnakes/ppa
+   73  sudo apt update
+   74  sudo apt install python3.13\n
+   75  python3.13 --version
+   76  which python3.13
+   77  poetry env use /bin/python3.13
+   78  poetry install
+   79  poetry lock
+   80  poetry install
+   81  poetry config --list
+   82  poetry config virtualenvs.create true
+   83  poetry install
+   84  poetry env list\n
+   85  which python
+   86  poetry shell
+   87  emulate bash -c '. /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate'
+   88  exit
+   89  poetry shell
+   90  emulate bash -c '. /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate'
+   91  pip freez
+   92  pip freeze
+   93  which python 
+   94  git pull origin main
+   95  python manage.py collectstatic 
+   96  sudo apt update && sudo apt upgrade -y 
+   97  sudo apt install postgresql postgresql-contrib -y
+   98  sudo systemctl start postgresql
+   99  sudo systemctl enable postgresql
+  100  sudo -i -u postgres
+  101  CREATE DATABASE Quantum-Co;
+  102  sudo -i -u postgres
+  103  poetry shell
+  104  which poetry
+  105  curl -sSL https://install.python-poetry.org | python3 -\n
+  106  which poetry
+  107  exit
+  108  which poetry
+  109  ls ~/.local/bin/poetry
+  110  nano ~/.zshrc
+  111  source ~/.zshrc\n
+  112  which poetry\n
+  113  poetry shell
+  114  emulate bash -c '. /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate'
+  115  pip install gunicorn
+  116  sudo apt install nginx  # Install Nginx
+  117  gunicorn --workers 3 --bind 127.0.0.1:8000 QuantumCo.wsgi:application
+  118  gunicorn --workers 3 --bind 148.113.205.147:8000 QuantumCo.wsgi:application
+  119  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  120  ps aux | grep gunicorn
+  121  kill -9 57948
+  122  kill -9 8164
+  123  sudo ufw allow 8000  # Open port 8000 in the firewall if using UFW\n
+  124  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  125  sudo nano /etc/nginx/sites-available/quantumco
+  126  sudo chown -R www-data:www-data /home/none/production/projects/Quantum-Co/staticfiles
+  127  sudo chmod -R 755 /home/none/production/projects/Quantum-Co/staticfiles
+  128  sudo nginx -t
+  129  sudo systemctl restart nginx
+  130  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  131  sudo chown -R www-data:www-data /home/none/production/projects/Quantum-Co/staticfiles\nsudo chmod -R 755 /home/none/production/projects/Quantum-Co/staticfiles
+  132  sudo systemctl restart gunicorn
+  133  sudo systemctl start gunicorn
+  134  pip install gunicorn
+  135  sudo systemctl restart gunicorn
+  136  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  137  sudo systemctl restart gunicorn
+  138  sudo systemctl daemon-reload
+  139  sudo nano /etc/systemd/system/gunicorn.service
+  140  sudo nano /etc/nginx/sites-available/quantumco
+  141  sudo ln -s /etc/nginx/sites-available/quantumco /etc/nginx/sites-enabled/
+  142  sudo nginx -t\n
+  143  sudo systemctl restart nginx
+  144  sudo nano /etc/nginx/sites-available/quantumco
+  145  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  146  sudo nano /etc/nginx/sites-available/quantumco
+  147  sudo systemctl restart gunicorn
+  148  sudo systemctl restart nginx
+  149  sudo systemctl restart gunicorn
+  150  sudo nano /etc/systemd/system/gunicorn.service
+  151  sudo systemctl deamon reload
+  152  sudo systemctl daemon-reload\n
+  153  sudo systemctl start gunicorn
+  154  sudo systemctl enable gunicorn
+  155  sudo systemctl status gunicorn
+  156  sudo nano /etc/systemd/system/gunicorn.service
+  157  sudo systemctl start gunicorn
+  158  sudo systemctl daemon-reload\n
+  159  sudo systemctl start gunicorn
+  160  sudo nano /etc/systemd/system/gunicorn.service
+  161  sudo groupadd none
+  162  sudo systemctl daemon-reload\n
+  163  sudo systemctl start gunicorn
+  164  sudo systemctl status gunicorn\n
+  165  sudo nano /etc/systemd/system/gunicorn.service
+  166  sudo systemctl daemon-reload\n
+  167  sudo systemctl start gunicorn
+  168  sudo systemctl status gunicorn\n
+  169  sudo systemctl daemon-reload\n
+  170  sudo systemctl status gunicorn\n
+  171  sudo nano /etc/systemd/system/gunicorn.service
+  172  poetry shell
+  173  emulate bash -c '. /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate'
+  174  ls
+  175  cd /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate
+  176  cd /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/
+  177  ls
+  178  cd 
+  179  sudo nano /etc/systemd/system/gunicorn.service
+  180  sudo systemctl daemon-reload\n
+  181  sudo systemctl start gunicorn
+  182  sudo systemctl status gunicorn\n
+  183  pip install gunicorn
+  184  sudo pip install gunicorn\n
+  185  sudo apt install python3-pip
+  186  sudo pip install gunicorn\n
+  187  pip install gunicorn
+  188  poetry shell\n
+  189  emulate bash -c '. /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate'
+  190  pip install gunicorn
+  191  sudo nano /etc/systemd/system/gunicorn.service
+  192  sudo systemctl daemon-reload\n
+  193  sudo systemctl start gunicorn
+  194  sudo systemctl status gunicorn\n
+  195  pip install gunicorn
+  196  ls /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/gunicorn
+  197  sudo nano /etc/systemd/system/gunicorn.service
+  198  sudo systemctl daemon-reload\n
+  199  sudo systemctl start gunicorn
+  200  sudo systemctl daemon-reload\n
+  201  sudo systemctl status gunicorn\n
+  202  sudo nano /etc/systemd/system/gunicorn.service
+  203  sudo systemctl daemon-reload\n
+  204  sudo systemctl start gunicorn
+  205  sudo systemctl status gunicorn\n
+  206  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  207  python manage.py collectstatic
+  208  sudo nano /etc/nginx/sites-available/your-site
+  209  sudo nano /etc/nginx/sites-available/quantumco
+  210  sudo chown -R www-data:www-data /home/none/production/projects/Quantum-Co/staticfiles/
+  211  sudo chmod -R 755 /home/none/production/projects/Quantum-Co/staticfiles/
+  212  sudo ufw allow 80,443/tcp
+  213  sudo ufw reload
+  214  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  215  python manage.py makemigrations
+  216  psql --version\n
+  217  sudo apt update
+  218  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/postgresql.asc\n
+  219  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -c | awk "{print $2}")-pgdg main" > /etc/apt/sources.list.d/pgdg.list'\n
+  220  sudo apt update\n
+  221  sudo apt install postgresql-13\n
+  222  sudo nano /etc/apt/sources.list.d/pgdg.list\n
+  223  sudo apt update\n
+  224  sudo apt install postgresql-13\n
+  225  python manage.py makemigrations
+  226  psql --version\n
+  227  python manage.py makemigrations
+  228  sudo systemctl status postgresql
+  229  pg_lsclusters\n
+  230  sudo systemctl stop postgresql\n
+  231  sudo apt-get remove --purge postgresql-12 postgresql-client-12 postgresql-common
+  232  sudo apt-get autoremove --purge
+  233  sudo rm -rf /var/lib/postgresql/12\n
+  234  vsudo rm -rf /var/log/postgresql/postgresql-12-main.log\nsudo rm -rf /etc/postgresql/12\n
+  235  sudo rm -rf /var/log/postgresql/postgresql-12-main.log\nsudo rm -rf /etc/postgresql/12\n
+  236  pg_lsclusters
+  237  psql --version
+  238  sudo apt install postgresql-13\n
+  239  psql --version
+  240  pg_lsclusters
+  241  sudo systemctl status postgresql
+  242  sudo -i -u postgres
+  243  python manage.py makemigrations
+  244  python manage.py migrate
+  245  gunicorn --workers 3 --bind 0.0.0.0:8000 QuantumCo.wsgi:application
+  246  docker-compose -f docker-compose.prod.yml up --build
+  247  sudo docker-compose -f docker-compose.prod.yml up --build
+  248  docker-compose -f docker-compose.prod.yml up --build\n
+  249  sudo docker-compose -f docker-compose.prod.yml up --build\n
+  250  docker-compose -f docker-compose.prod.yml exec web python manage.py createsuperuser\n
+  251  sudo docker-compose -f docker-compose.prod.yml exec web python manage.py createsuperuser\n
+  252  sudo docker-compose -f docker-compose.prod.yml exec python manage.py createsuperuser\n
+  253  sudo docker-compose -f docker-compose.prod.yml exec python python manage.py createsuperuser\n
+  254  python manage.py createsuperuser\n\n
+  255  pip install django-environ\n
+  256  python manage.py createsuperuser\n\n
+  257  sudo python manage.py createsuperuser\n\n
+  258  pip install django
+  259  sudo su
+  260  docker-compose -f docker-compose.prod.yml up --build\n
+  261  sudo docker-compose -f docker-compose.prod.yml up --build\n
+  262  pip install python-decouple\n
+  263  docker-compose -f docker-compose.yml up --build\n
+  264  sudo usermod -aG docker $USER
+  265  exit
+  266  docker-compose -f docker-compose.yml up --build
+  267  newgrp docker
+  268  docker ps
+  269  docker-compose -f docker-compose.yml up --build
+  270  docker-compose exec web python manage.py createsuperuser\n
+  271  docker-compose -f docker-compose.prod.yml up -d
+  272  docker-compose -f docker-compose.yml up -d
+  273  docker-compose exec web python manage.py createsuperuser\n
+  274  docker-compose exec web python manage.py makemigrations\n
+  275  docker-compose exec web python manage.py migrate\n
+  276  docker-compose exec web python manage.py createsuperuser\n
+  277  docker-compose logs db
+  278  poetry shell
+  279  emulate bash -c '. /home/none/.cache/pypoetry/virtualenvs/quantumco-4-SQItis-py3.13/bin/activate'
+  280  docker-compose -f docker-compose.yml up
+  281  cd /etc/nginx/sites-available
+  282  ls
+  283  cd qua
+  284  cd quantumco
+  285  ls
+  286  cd quantumco
+  287  sudo nano /etc/nginx/sites-available/quantumco
+  288  sudo apt install certbot python3-certbot-nginx
+  289  cd 
+  290  sudo certbot --nginx -d 148.113.205.147
+  291  sudo systemctl status nginx
+  292  sudo systemctl start nginx
+  293  sudo systemctl reload nginx\n
+  294  sudo ufw status
+  295  sudo ufw allow 80\nsudo ufw allow 443
+  296  curl http://localhost
+  297  curl http://127.0.0.1:8000
+  298  curl http://0.0.0.0:8000
+  299  curl http://quantum-co.dev
+  300  curl -I http://quantum-co.dev\n
+  301  nslookup quantum-co.dev\n
+  302  sudo cp /etc/nginx/sites-available/quantumco ./nginx.conf
+  303  ls
+  304  rm -rf nginx.conf
+  305  cd production/
+  306  ls
+  307  cd projects
+  308  ls
+  309  cd Quantum-Co
+  310  ls
+  311  sudo cp /etc/nginx/sites-available/quantumco ./nginx.conf
+  312  docker-compose -f docker-compose.yml up -d --build
+  313  sudo systemctl stop nginx
+  314  sudo systemctl status nginx
+  315  docker-compose up --build\n
+  316  docker-compose up --build
+  317  CD /etc/nginx/
+  318  cd /etc/nginx/
+  319  ls
+  320  cd
+  321  cd production
+  322  cd 
+  323  \tcd production
+  324  cd q
+  325  cd projects
+  326  cd Quantum-Co
+  327  docker-compose up --build
+  328  docker-compose up --build\n: 1731935032:0;docker-compose up --build
+  329  nslookup quantum-co.dev\n
+  330  docker-compose up --build
+  331  sudo apt install certbot python3-certbot-nginx
+  332  sudo certbot --nginx -d quantum-co.dev -d www.quantum-co.dev\n
+  333  cd /etc/letsencrypt/live/quantum-co.dev
+  334  sudo cd /etc/letsencrypt/live/quantum-co.dev
+  335  docker-compose up --build
+  336  ls -l /etc/letsencrypt/live/quantum-co.dev/
+  337  sudo ls -l /etc/letsencrypt/live/quantum-co.dev/
+  338  sudo nginx -t\n
+  339  sudo systemctl reload nginx\n
+  340  docker-compose up --build
+  341  sudo lsof -i :80\n
+  342  sudo systemctl stop nginx\n
+  343  sudo lsof -i :80\n
+  344  sudo systemctl stop nginx\n
+  345  sudo lsof -i :80\n
+  346  docker-compose up --build
+  347  sudo lsof -i :80
+  348  sudo kill -9 108433
+  349  sudo lsof -i :80
+  350  sudo kill -9 108583 108584 108585 108586
+  351  sudo lsof -i :80
+  352  docker-compose up --build
+  353  ls -l /etc/letsencrypt/live/quantum-co.dev/
+  354  sudo ls -l /etc/letsencrypt/live/quantum-co.dev/
+  355  sudo chown -R root:none /etc/letsencrypt/live /etc/letsencrypt/archive
+  356  sudo chmod -R 750 /etc/letsencrypt/live /etc/letsencrypt/archive
+  357  sudo systemctl restart nginx
+  358  docker-compose up --build
+  359  sudo systemctl stop nginx\n
+  360  sudo lsof -i :80
+  361  docker-compose up --build
+  362  sudo ls -l /etc/letsencrypt/live/quantum-co.dev/
+  363  sudo chmod 755 /etc/letsencrypt\nsudo chmod 755 /etc/letsencrypt/live\nsudo chmod 755 /etc/letsencrypt/live/quantum-co.dev\nsudo chmod 644 /etc/letsencrypt/live/quantum-co.dev/*
+  364  docker-compose up --build
+  365  sudo nano /etc/letsencrypt/live/quantum-co.dev/privkey.pem
+  366  sudo chmod -R 755 /etc/letsencrypt\nsudo chmod 644 /etc/letsencrypt/live/quantum-co.dev/*
+  367  docker-compose up --build
+  368  git rm --cached docker-compose.yml
+  369  git checkout dev
+  370  git branch dev
+  371  git checkout dev 
+  372  git pull origin main
+  373  git checkout production 
